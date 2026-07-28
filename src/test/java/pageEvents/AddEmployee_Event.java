@@ -26,12 +26,12 @@ public class AddEmployee_Event {
 	     	Thread.sleep(3000); 
 	    
 	     ele.getWebElement("Xpath",Pimpageobject.add_btn).click();
-	     ele.getWebElement("Xpath", AddEmployee.frstName).sendKeys(" gireesha");
+	     ele.getWebElement("Xpath", AddEmployee.frstName).sendKeys(" gireesha");//employee name
 	     ele.getWebElement("Xpath", AddEmployee.midlname).sendKeys("n");
 	     ele.getWebElement("Xpath", AddEmployee.lstname).sendKeys("l");
 	    ele.getWebElement("Xpath", AddEmployee.empid).sendKeys("01");
 		ele.getWebElement("Xpath", AddEmployee.toggle).click();
-		ele.getWebElement("Xpath", AddEmployee.username).sendKeys("admin23h");
+		ele.getWebElement("Xpath", AddEmployee.username).sendKeys("admin4t");
 		ele.getWebElement("Xpath", AddEmployee.password).sendKeys("Admin@123");
 		ele.getWebElement("Xpath", AddEmployee.cnfrmpswrd).sendKeys("Admin@123");
 		WebElement cnclbtn = ele.getWebElement("Xpath", AddEmployee.cnlbtn);

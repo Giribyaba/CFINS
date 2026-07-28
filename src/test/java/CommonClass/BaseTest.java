@@ -13,11 +13,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -25,9 +27,11 @@ public class BaseTest {
 
 	public static WebDriver driver;
 	 protected Logger logger;
-	@BeforeMethod
-	  
-	
+	//@BeforeMethod
+	@BeforeClass
+	/*"If each test case should run independently, I use @BeforeMethod to launch the browser and @AfterMethod to close it. This ensures every 
+	test starts with a clean browser session. If multiple test methods need to share the same browser session for performance reasons,
+	 I use @BeforeClass and @AfterClass."*/
 	public void Setup() throws IOException
 	{
 		
@@ -48,7 +52,8 @@ public class BaseTest {
 	}
 	
 	
-@AfterMethod
+//@AfterMethod
+//@AfterClass
 	public void Teardown() 
 	{
 		driver.quit();

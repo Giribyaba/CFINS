@@ -23,7 +23,7 @@ public class ExtentReport implements ITestListener {
 	    @Override
 	    public void onTestStart(ITestResult result) {
 	   String timestamp    = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
-	   String reportname=" TestReport" + timestamp    + ".html" ;
+	   String reportname= result.getMethod().getMethodName() + timestamp    + ".html" ;
 	    sparkReporter = new ExtentSparkReporter(".\\reports\\"+reportname);
 	    Extent = new ExtentReports();
 	   Extent.attachReporter(sparkReporter);
@@ -34,6 +34,8 @@ public class ExtentReport implements ITestListener {
 	    @Override
 	    public void onTestSuccess(ITestResult result) {
 	    	ExtentTest test = Extent.createTest(result.getTestClass().getName());
+	    	String imagepath = new BaseTest().capturescreenshot(result.getName());
+	    	test.addScreenCaptureFromPath(imagepath);
 	    		   test.assignCategory(result.getMethod().getMethodName());
 	    		   test.log(Status.PASS, "Test is passed : " + result.getName());
 	    	

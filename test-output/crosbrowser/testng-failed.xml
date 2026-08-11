@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [crosbrowser]">
+  <test thread-count="5" name="firefox(failed)">
+    <classes>
+      <class name="OregneHRM.TC07">
+        <methods>
+          <include name="Setup"/>
+          <include name="rejectJobApplication"/>
+          <include name="userLogin"/>
+        </methods>
+      </class> <!-- OregneHRM.TC07 -->
+    </classes>
+  </test> <!-- firefox(failed) -->
+</suite> <!-- Failed suite [crosbrowser] -->

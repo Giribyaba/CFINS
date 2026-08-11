@@ -1,5 +1,7 @@
 package Utilities;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +22,19 @@ public class Elementfetch {
 		            default:
 		                return null;
 		        }
+		    }     
+		        
+		        public List<WebElement> getWebElements(String type, String locator) {
+		            switch(type.toUpperCase()) {
+		                case "XPATH":
+		                    return BaseTest.driver.findElements(By.xpath(locator));
+		                case "ID":
+		                    return BaseTest.driver.findElements(By.id(locator));
+		                case "CSS":
+		                    return BaseTest.driver.findElements(By.cssSelector(locator));
+		                default:
+		                    return null;
+		            }
 		    }
 }
 		

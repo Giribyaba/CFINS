@@ -7,3 +7,4 @@ public class Pimpageobject {
 	public static String add_emp_pag_label="//h2[.='Add Employee']";
 
 }
+	

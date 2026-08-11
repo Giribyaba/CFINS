@@ -15,25 +15,18 @@ import Utilities.Elementfetch;
 public class AddEmployee_Event {
 	
 	Elementfetch ele=	new Elementfetch();
-	 public void addemployee() throws InterruptedException 
+	 public void addemployee(String frstName,String midlname,String lstname,String empid,String username, String password,String cnfrmpswrd) throws InterruptedException 
 	 {
-		 ele.getWebElement("Xpath",PageObjectClass.Loginpage.username).sendKeys("Admin");
-		 ele.getWebElement("Xpath", PageObjectClass.Loginpage.Password).sendKeys("admin123");
-		 ele.getWebElement("xpath",PageObjectClass. Loginpage.buuton).click();
-				 Thread.sleep(3000);
-	     ele.getWebElement("Xpath", PageObjectClass.Menubar.pim_btn).click();
-		 
-	     	Thread.sleep(3000); 
-	    
+		 ele.getWebElement("Xpath",AddEmployee.pim).click();
 	     ele.getWebElement("Xpath",Pimpageobject.add_btn).click();
-	     ele.getWebElement("Xpath", AddEmployee.frstName).sendKeys(" gireesha");//employee name
-	     ele.getWebElement("Xpath", AddEmployee.midlname).sendKeys("n");
-	     ele.getWebElement("Xpath", AddEmployee.lstname).sendKeys("l");
-	    ele.getWebElement("Xpath", AddEmployee.empid).sendKeys("01");
+	     ele.getWebElement("Xpath", AddEmployee.frstName).sendKeys(frstName);//employee name
+	     ele.getWebElement("Xpath", AddEmployee.midlname).sendKeys(midlname);
+	     ele.getWebElement("Xpath", AddEmployee.lstname).sendKeys(lstname);
+	    ele.getWebElement("Xpath", AddEmployee.empid).sendKeys(empid);
 		ele.getWebElement("Xpath", AddEmployee.toggle).click();
-		ele.getWebElement("Xpath", AddEmployee.username).sendKeys("admin4t");
-		ele.getWebElement("Xpath", AddEmployee.password).sendKeys("Admin@123");
-		ele.getWebElement("Xpath", AddEmployee.cnfrmpswrd).sendKeys("Admin@123");
+		ele.getWebElement("Xpath", AddEmployee.username).sendKeys(username);
+		ele.getWebElement("Xpath", AddEmployee.password).sendKeys(password);
+		ele.getWebElement("Xpath", AddEmployee.cnfrmpswrd).sendKeys(cnfrmpswrd);
 		WebElement cnclbtn = ele.getWebElement("Xpath", AddEmployee.cnlbtn);
 		WebElement svbtn = ele.getWebElement("Xpath", AddEmployee.svbtn);
 		if(svbtn.isDisplayed())

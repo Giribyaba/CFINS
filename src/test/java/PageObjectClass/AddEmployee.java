@@ -1,7 +1,7 @@
 package PageObjectClass;
 
 public class AddEmployee {
-	
+	public static String pim="//span[.='PIM']";
 	public static String frstName="//input[@name='firstName']";
 	public static String midlname="//input[@name='middleName']";
 	public static String lstname="//input[@name='lastName']";

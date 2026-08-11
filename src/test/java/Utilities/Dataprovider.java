@@ -1,5 +1,7 @@
   package Utilities;
 
+import java.util.Objects;
+
 import org.testng.annotations.DataProvider;
 
 public class Dataprovider {
@@ -34,6 +36,20 @@ public Object[][] getExceldata()
 public Object[][] getCandidateData()
 {
 	return Excelutil.getcelldate(System.getProperty("user.dir")+"/testdata/AddCandidateData.xlsx","Sheet1");
+}
+
+@DataProvider(name="RejectCandidate")
+	public Object[][] getRejectCandidateData()
+	{
+	return Excelutil.getcelldate(System.getProperty("user.dir")+"/testdata/RejectCandidate.xlsx","Sheet1");
+}
+
+@DataProvider(name="AddEmployee")
+public Object[][] getaddEmployeeData()
+{
+	return Excelutil.getcelldate(System.getProperty("user.dir")+"/testdata/AddEmployee.xlsx","Sheet1");
+	
+	
 }
 }
 

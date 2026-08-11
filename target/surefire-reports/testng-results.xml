@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-28T18:15:33 IST" name="Suite" finished-at="2026-07-28T18:21:33 IST" duration-ms="359508">
+    <groups>
+    </groups>
+    <test started-at="2026-07-28T18:15:33 IST" name="Test" finished-at="2026-07-28T18:21:33 IST" duration-ms="359508">
+      <class name="OregneHRM.TC06">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:OregneHRM.TC06@44ebcd03]" started-at="2026-07-28T18:15:33 IST" name="Setup" finished-at="2026-07-28T18:20:49 IST" duration-ms="315118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="recuitmentTest(java.lang.String,java.lang.String)[pri:0, instance:OregneHRM.TC06@44ebcd03]" started-at="2026-07-28T18:20:50 IST" name="recuitmentTest" data-provider="LoginExcelData" finished-at="2026-07-28T18:21:12 IST" duration-ms="21936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recuitmentTest -->
+        <test-method signature="addCnadidate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:OregneHRM.TC06@44ebcd03]" started-at="2026-07-28T18:21:13 IST" name="addCnadidate" data-provider="AddCandidateData" finished-at="2026-07-28T18:21:33 IST" depends-on-methods="OregneHRM.TC06.recuitmentTest" duration-ms="19909" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sangeeth]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[s]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Santhosh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sangeeth@cfins.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Important]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Refered by gireesha]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Asses the Candidate confidence]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[12-Dec-2020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCnadidate -->
+      </class> <!-- OregneHRM.TC06 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

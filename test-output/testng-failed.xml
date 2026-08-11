@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="OregneHRM.TC04">
+      <class name="OregneHRM.TC08">
         <methods>
           <include name="Setup"/>
-          <include name="addEployee"/>
-          <include name="Teardown"/>
+          <include name="Userlogin" invocation-numbers="0 0 0 0"/>
+          <include name="AddEmp"/>
         </methods>
-      </class> <!-- OregneHRM.TC04 -->
+      </class> <!-- OregneHRM.TC08 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

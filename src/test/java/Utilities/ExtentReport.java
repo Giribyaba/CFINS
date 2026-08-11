@@ -68,7 +68,8 @@ public class ExtentReport implements ITestListener {
 
 	        @Override
 	        public void onFinish(org.testng.ITestContext context) {
-	            Extent.flush();
+	        	if (Extent != null) {
+	                Extent.flush();
 	         }
-	}
+	}}
 
